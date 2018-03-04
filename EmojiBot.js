@@ -55,7 +55,9 @@ Message my owner @Themoonisachee.se on https://discord.gg/YC9raqG if you have fu
 					ignore = 2;
 				}else {
 					if (i>0 && splitted[i-1].charAt(splitted[i-1].length-1) !== ' ') {
-						ignore = 1;
+						if (i!=0) {
+							ignore = 1;
+						}
 					}
 				}
 
