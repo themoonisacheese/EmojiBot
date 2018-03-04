@@ -53,10 +53,12 @@ Message my owner @Themoonisachee.se on https://discord.gg/YC9raqG if you have fu
 			for (var i = 0; i < splitted.length; i++) {
 				if (i>0 && splitted[i-1].charAt(splitted[i-1].length-1) === '<') {
 					ignore = 2;
+				}else {
+					if (i>0 && splitted[i-1].charAt(splitted[i-1].length-1) !== ' ') {
+						ignore = 1;
+					}
 				}
-				if (i>0 && splitted[i-1].charAt(splitted[i-1].length-1) !== ' ') {
-					ignore = 1;
-				}
+
 
 				if (ignore>0) {
 					newmessage+=":"+splitted[i];
